@@ -149,7 +149,7 @@ export class Renderer {
     ctx.textAlign = "center";
     ctx.fillStyle = "#fff3d4";
     ctx.font = "30px Determination, monospace";
-    ctx.fillText(titles[scene], w / 2, 140);
+    // ctx.fillText(titles[scene], w / 2, 140);
 
     // Room-specific visual anchor.
     ctx.fillStyle = "#856979";
