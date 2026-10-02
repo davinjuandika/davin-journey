@@ -22,8 +22,8 @@ export class Player {
   private animationTimer = 0;
   private moving = false;
 
-  private readonly frameWidth = 48;
-  private readonly frameHeight = 48;
+  private readonly frameWidth = 32;
+  private readonly frameHeight = 32;
   private readonly frameCount = 6;
   private readonly frameDuration = 0.10;
 
@@ -56,10 +56,10 @@ export class Player {
 
   get box(): Box {
     return {
-      x: this.x + 11,
-      y: this.y + 22,
-      width: 26,
-      height: 22,
+      x: this.x + 7,
+      y: this.y + 17,
+      width: 18,
+      height: 13,
     };
   }
 
@@ -108,7 +108,7 @@ export class Player {
       before,
       dx * this.speed * deltaTime,
       dy * this.speed * deltaTime,
-      solids
+      solids,
     );
 
     this.x += moved.x - before.x;
@@ -140,8 +140,6 @@ export class Player {
     const screenY = Math.round(this.y);
 
     if (this.direction === "left") {
-      // The sprite sheet only provides a side-facing frame. Flip the
-      // right-facing frame horizontally when the player walks left.
       ctx.save();
       ctx.translate(screenX + this.width, screenY);
       ctx.scale(-1, 1);
@@ -155,7 +153,7 @@ export class Player {
         0,
         0,
         this.width,
-        this.height
+        this.height,
       );
 
       ctx.restore();
@@ -171,7 +169,7 @@ export class Player {
       screenX,
       screenY,
       this.width,
-      this.height
+      this.height,
     );
   }
 

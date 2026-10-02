@@ -1,0 +1,5 @@
+Cute Fantasy Assets
+
+The visual assets in public/sprites/ were replaced with the Cute Fantasy Assets pack supplied by the project owner.
+
+Before publishing the portfolio publicly or using it commercially, verify the original asset pack's license and attribution requirements from its source.

@@ -40,3 +40,7 @@ npm run dev
 ```
 
 Open `http://localhost:3000`.
+
+## Latest outdoor update
+
+The outdoor map now uses the Cute Fantasy Assets pack for the player, grass, path, water, farmland, wheat crops, fences, lamps, rocks, trees, and other props. A fenced wheat field sits in front of the house, with a small access path, and lamp posts line the main road. The house exterior remains a placeholder until a final house asset is selected.

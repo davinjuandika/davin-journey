@@ -1,0 +1,315 @@
+/* [project]/davin-journey-portfolio-v8/app/globals.css [app-client] (css) */
+@font-face {
+  font-family: Determination;
+  src: url("/fonts/DeterminationMonoWebRegular-Z5oq.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --pixel-font: "Determination", "Courier New", monospace;
+  --ink: #f4f0df;
+  --muted: #b7b4a6;
+  --panel: #08080af7;
+  --line: #e7dfc8;
+  --accent: #ffd43d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  background: #080808;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--pixel-font);
+  image-rendering: pixelated;
+}
+
+button, a {
+  font: inherit;
+}
+
+.game-root {
+  background: #080808;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-canvas {
+  width: 100vw;
+  height: 100vh;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  display: block;
+}
+
+.screen-vignette {
+  pointer-events: none;
+  background: linear-gradient(#0000002e, #0000 18% 82%, #00000059), linear-gradient(to right, #00000029, #0000 20% 80%, #00000029);
+  position: absolute;
+  inset: 0;
+}
+
+.start-screen, .loading-screen {
+  color: var(--ink);
+  z-index: 10;
+  background: #080808;
+  place-items: center;
+  display: grid;
+  position: absolute;
+  inset: 0;
+}
+
+.start-card, .loading-card {
+  text-align: center;
+  padding: 28px;
+}
+
+.start-title {
+  letter-spacing: .12em;
+  text-shadow: 5px 5px #2f2b23;
+  margin: 0;
+  font-size: clamp(64px, 11vw, 150px);
+  line-height: .8;
+}
+
+.start-subtitle {
+  color: var(--muted);
+  margin: 28px 0 54px;
+  font-size: clamp(18px, 2.5vw, 28px);
+}
+
+.start-prompt {
+  color: var(--ink);
+  font-size: clamp(20px, 3vw, 32px);
+  animation: 1s steps(2, jump-none) infinite blink;
+  display: inline-block;
+}
+
+.start-help {
+  color: #77746c;
+  letter-spacing: .04em;
+  margin-top: 22px;
+  font-size: 13px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.hud {
+  pointer-events: none;
+  z-index: 4;
+  justify-content: space-between;
+  align-items: flex-start;
+  display: flex;
+  position: absolute;
+  inset: 14px 14px auto;
+}
+
+.hud-box {
+  color: var(--ink);
+  background: #050506c7;
+  border: 2px solid #f4f0dfb8;
+  padding: 8px 11px;
+  box-shadow: 4px 4px #00000059;
+}
+
+.hud-name {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.hud-small {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.interaction {
+  z-index: 4;
+  color: var(--ink);
+  white-space: nowrap;
+  background: #050506e0;
+  border: 2px solid #f4f0dfcc;
+  padding: 9px 13px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 4px 4px #00000059;
+}
+
+.dialog-overlay {
+  z-index: 8;
+  background: #00000085;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  display: flex;
+  position: absolute;
+  inset: 0;
+}
+
+.dialog-box {
+  background: var(--panel);
+  width: min(900px, 94vw);
+  max-height: 84vh;
+  color: var(--ink);
+  border: 3px solid var(--line);
+  padding: 22px;
+  overflow: auto;
+  box-shadow: 8px 8px #0000008c;
+}
+
+.dialog-box h2 {
+  margin: 0 0 12px;
+  font-size: clamp(28px, 4vw, 42px);
+}
+
+.eyebrow {
+  color: var(--accent);
+  letter-spacing: .08em;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.modal-content p, .dialog-box p {
+  color: #d3cfbf;
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.info-list, .timeline-list, .contact-list {
+  gap: 10px;
+  margin-top: 18px;
+  display: grid;
+}
+
+.timeline-item {
+  border-left: 3px solid var(--accent);
+  background: #111114;
+  padding: 9px 12px;
+}
+
+.timeline-item strong {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.timeline-item span {
+  color: #bdb9aa;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.skill-grid {
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+  display: flex;
+}
+
+.skill-chip {
+  background: #111114;
+  border: 2px solid #6d6a60;
+  padding: 9px 12px;
+}
+
+.project-highlight {
+  background: #111114;
+  border: 2px solid #6d6a60;
+  padding: 16px;
+}
+
+.stack {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.project-links {
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+  display: flex;
+}
+
+.project-links a, .contact-list a {
+  border: 2px solid var(--line);
+  color: var(--line);
+  padding: 8px 11px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.project-links a:hover, .contact-list a:hover, .overlay-close:hover {
+  background: var(--line);
+  color: #111;
+}
+
+.contact-list a {
+  width: fit-content;
+}
+
+.overlay-close {
+  border: 2px solid var(--line);
+  color: var(--ink);
+  cursor: pointer;
+  background: none;
+  margin-top: 18px;
+  padding: 9px 15px;
+}
+
+.fade-layer {
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0;
+  background: #000;
+  transition: opacity .26s linear;
+  position: absolute;
+  inset: 0;
+}
+
+.fade-layer.visible {
+  opacity: 1;
+}
+
+@media (max-width: 720px) {
+  .hud {
+    inset: 8px 8px auto;
+  }
+
+  .hud-box {
+    padding: 7px 8px;
+  }
+
+  .hud-name {
+    font-size: 12px;
+  }
+
+  .hud-small {
+    font-size: 9px;
+  }
+
+  .interaction {
+    text-overflow: ellipsis;
+    max-width: 92vw;
+    font-size: 10px;
+    bottom: 12px;
+    overflow: hidden;
+  }
+}
+
+/*# sourceMappingURL=davin-journey-portfolio-v8_app_globals_0f3bzpr.css.map*/

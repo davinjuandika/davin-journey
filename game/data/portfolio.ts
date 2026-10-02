@@ -12,32 +12,39 @@ export const profile = {
   university: "BINUS University",
   tagline: "Building things, learning by making them.",
   gpa: "3.06",
-  email: "juandikadavin@gmail.com",
-  github: "https://github.com/davinjuandika",
-  linkedin: "https://www.linkedin.com/in/davin-juandika/",
+  email: "your-email@example.com",
+  github: "https://github.com/yourusername",
+  linkedin: "https://www.linkedin.com/in/yourusername/",
 };
 
 export const projects: Project[] = [
   {
-    title: "SpoJedy",
+    title: "PORTO RPG Portfolio",
     description:
-      "SpoJeDy is a modern music streaming platform built by our development team using VueJS. It allows users to explore songs, listen to audio tracks, and watch music videos in a seamless and engaging interface. The app highlights multimedia integration and user personalization, showcasing a complete entertainment experience.",
-    stack: "Vue · CSS · JavaScript · TypeScript",
-    github: "https://github.com/NotReichmann/MultiMedia-SpoJedy",
+      "An interactive pixel RPG portfolio where visitors explore a world to discover my work.",
+    stack: "Next.js · TypeScript · Canvas",
+    github: "https://github.com/yourusername/porto-rpg-portfolio",
   },
   {
     title: "Picverse",
     description:
-      "Picverse is a website that can be use to find artwork and also can be a social media, that combine a few social media into one platform, and also can be a place to find artwork from various artists.",
+      "A desktop-first creative image platform created as an HCI project.",
     stack: "HTML · CSS · JavaScript · HCI",
-    github: "https://github.com/davinjuandika/Picverse",
+    github: "https://github.com/yourusername/picverse",
   },
   {
-    title: "ChiMatcha",
+    title: "Game Design Project",
     description:
-      "ChiMatcha is a Mobile app Use specifically for people to order matcha drinks",
+      "A university game design project focused on interaction, systems, and player experience.",
     stack: "Game Design · UI · Prototyping",
-    github: "https://github.com/davinjuandika/ChiMatcha",
+    github: "https://github.com/yourusername/game-design-project",
+  },
+  {
+    title: "RLC Circuit Simulation",
+    description:
+      "A computational physics project visualizing an RLC circuit response from simulation data.",
+    stack: "Python · Numerical Methods · Visualization",
+    github: "https://github.com/yourusername/rlc-simulation",
   },
 ];
 

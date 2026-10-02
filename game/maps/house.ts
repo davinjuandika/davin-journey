@@ -70,10 +70,10 @@ export const roomReturnPoints: Record<SectionScene, { x: number; y: number }> = 
 export const roomInteractiveSpots = (scene: SectionScene): InteractiveSpot[] => {
   if (scene === "projects") {
     return [
-      { id: "project-0", x: 120, y: 205, width: 240, height: 150, label: "OPEN PROJECT 1", icon: "SpoJedy" },
-      { id: "project-1", x: 520, y: 205, width: 240, height: 150, label: "OPEN PROJECT 2", icon: "Picverse" },
-      { id: "project-2", x: 920, y: 205, width: 240, height: 150, label: "OPEN PROJECT 3", icon: "ChiMatcha" },
-      { id: "project-3", x: 520, y: 410, width: 240, height: 150, label: "OPEN PROJECT 4", icon: "To be continued" },
+      { id: "project-0", x: 120, y: 205, width: 240, height: 150, label: "OPEN PROJECT 1", icon: "BOOK" },
+      { id: "project-1", x: 520, y: 205, width: 240, height: 150, label: "OPEN PROJECT 2", icon: "BOOK" },
+      { id: "project-2", x: 920, y: 205, width: 240, height: 150, label: "OPEN PROJECT 3", icon: "BOOK" },
+      { id: "project-3", x: 520, y: 410, width: 240, height: 150, label: "OPEN PROJECT 4", icon: "BOOK" },
     ];
   }
 
@@ -81,7 +81,7 @@ export const roomInteractiveSpots = (scene: SectionScene): InteractiveSpot[] => 
     about: { label: "OPEN NOTEBOOK", icon: "BOOK" },
     skills: { label: "READ SKILL BOOK", icon: "BOOK" },
     experience: { label: "OPEN LOGBOOK", icon: "LOG" },
-    education: { label: "MY EDUCATION", icon: "EDUCATION" },
+    education: { label: "READ DIPLOMA", icon: "DIPLOMA" },
     contact: { label: "USE COMPUTER", icon: "PC" },
     projects: { label: "OPEN PROJECT", icon: "BOOK" },
   };
